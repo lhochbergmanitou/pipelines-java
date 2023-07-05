@@ -10,13 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: Npm@1
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    command: 'publish'
+    workingDir: 'json/'
+    verbose: true
+    publishRegistry: 'useFeed'
+    publishFeed: 'da11ffaa-cef1-4788-9980-340b6a6f8763/1c7cf5fd-a5a7-493d-ac04-7a024b0aa7ef'
