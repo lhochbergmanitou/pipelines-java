@@ -15,6 +15,6 @@ steps:
   inputs:
     command: 'publish'
     verbose: true
-    workingDir: 'json/'
+    workingDir: './json/'
     publishRegistry: 'useFeed'
     publishFeed: 'da11ffaa-cef1-4788-9980-340b6a6f8763/1c7cf5fd-a5a7-493d-ac04-7a024b0aa7ef'
